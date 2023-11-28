@@ -78,8 +78,8 @@ def ada_gridsearch(param_dict, x_train, y_train, x_valid, y_valid, base_model, s
     metrics_label = ['accuracy', 'call', 'f1 scores']  ## ylabel
     step = 1  ## 用来标记图的序号
     plt.figure(figsize = (12, 8)) ## 设置整个画布的大小
-    ## 遍历结果 绘制 len(accuracy) * 3 个图
-    for i in range(len(accuracy)):
+    ## 遍历结果 绘制 len(lr_dict) * 3 个图
+    for i in range(len(lr_dict)):
         for j in range(3):
             plt.subplot(len(accuracy), 3, step)
             plt.plot(n_estimators, results[j][i])
